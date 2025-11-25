@@ -681,3 +681,16 @@ img {
         padding: 3.2rem 0;
     }
 }
+@media (max-width: 768px) {
+    #inicio .container  {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        text-align: center;
+        
+    }
+    #inicio .hero-actions{
+        justify-content: center;
+    }
+
+
+}
