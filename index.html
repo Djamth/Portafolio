@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Denis Jamil Tineo Huancas</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navegación -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <div class="nav-logo-circle">DJ</div>
+            </div>
+
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span></span>
+            </button>
+
+            <nav class="nav-links">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#sobre-mi">Quién soy</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero principal -->
+        <section id="inicio" class="hero">
+            <div class="container hero-inner">
+                <!-- Texto izquierda -->
+                <div class="hero-text">
+                    <p class="hero-kicker">Backend Developer · Ingeniería de Sistemas</p>
+
+                    <h1 class="hero-title">
+                        I'm <span>Denis Jamil</span><br>
+                        Tineo Huancas
+                    </h1>
+
+                    <p class="hero-description">
+                        Estudiante de Ingeniería de Sistemas con foco en desarrollo backend, 
+                        APIs REST con Spring Boot y arquitectura de TI. Me interesa construir 
+                        soluciones limpias, escalables y alineadas a las necesidades del negocio.
+                    </p>
+
+                    <div class="hero-actions">
+                        <!-- Cambia el href cuando tengas tu CV -->
+                        <a href="#" class="btn-primary">Download CV</a>
+                    </div>
+                </div>
+
+                <!-- Foto derecha -->
+                <div class="hero-photo">
+                    <div class="photo-frame">
+                        <!-- Reemplaza la ruta por tu propia foto -->
+                        <img src="DJ.jpeg" alt="Foto de Denis Jamil" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIÉN SOY -->
+        <section id="sobre-mi" class="section about">
+            <div class="container about-inner">
+                <div class="about-text-block">
+                    <h2 class="section-title">Quién soy</h2>
+                    <p class="section-kicker">Un desarrollador backend en formación, con visión de arquitectura.</p>
+
+                    <p class="section-text">
+                        Soy estudiante de Ingeniería de Sistemas con un interés especial por el 
+                        <strong>desarrollo backend</strong>, la <strong>arquitectura de TI</strong> y la 
+                        <strong>gestión de la calidad del software</strong>. Disfruto diseñar APIs REST bien estructuradas 
+                        y entender cómo las soluciones tecnológicas se alinean con los procesos de negocio.
+                    </p>
+
+                    <p class="section-text">
+                        En mis proyectos académicos he trabajado con <strong>Spring Boot</strong>, 
+                        <strong>arquitectura en capas</strong>, <strong>bases de datos relacionales</strong> y marcos como 
+                        <strong>TOGAF</strong>, <strong>COSO</strong> e <strong>ISO/IEC</strong> para definir arquitecturas, 
+                        evaluar riesgos y proponer mejoras de TI.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>Desarrollo de APIs REST con Java y Spring Boot.</li>
+                        <li>Modelado de arquitecturas As-Is / To-Be bajo TOGAF.</li>
+                        <li>Diseño de matrices de riesgo y controles basados en COSO.</li>
+                        <li>Aplicación de modelos de calidad de software (ISO/IEC 9126, 25000).</li>
+                    </ul>
+                </div>
+
+                <div class="about-cards">
+                    <article class="about-card">
+                        <h3>Backend & APIs</h3>
+                        <p>
+                            Construcción de servicios backend, controladores REST, manejo de DTOs y 
+                            conexión con bases de datos.
+                        </p>
+                        <span class="about-chip">Java · Spring Boot · MySQL</span>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Arquitectura TI</h3>
+                        <p>
+                            Análisis de procesos, definición de aplicaciones y tecnología, y elaboración 
+                            de roadmaps de transformación.
+                        </p>
+                        <span class="about-chip">TOGAF · BPMN</span>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Riesgos & Calidad</h3>
+                        <p>
+                            Identificación de riesgos informáticos, definición de controles y uso de 
+                            métricas de calidad para la toma de decisiones.
+                        </p>
+                        <span class="about-chip">COSO · ISO/IEC</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO -->
+        <section id="portafolio" class="section portfolio">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2 class="section-title">Portafolio</h2>
+                    <p class="section-text">
+                        Algunos proyectos académicos y personales donde aplico desarrollo backend, arquitectura de TI
+                        y gestión de riesgos. Iré añadiendo más trabajos a medida que avance en mi carrera.
+                    </p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Proyecto 1 -->
+                    <article class="project-card">
+                        <div class="project-badge">Backend</div>
+                        <h3 class="project-title">Sistema de Ventas con API REST</h3>
+                        <p class="project-tech">
+                            Java · Spring Boot · Spring Security · JPA · MySQL
+                        </p>
+                        <p class="project-desc">
+                            Desarrollo de un sistema de ventas con arquitectura en capas, autenticación 
+                            por JWT y endpoints REST listos para integrar un frontend web.
+                        </p>
+                        <div class="project-footer">
+                            <span class="project-role">Rol: Backend Developer</span>
+                            <!-- Cambia # por tu repo cuando lo publiques -->
+                            <a href="#" class="project-link">Ver código</a>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="project-card">
+                        <div class="project-badge">Arquitectura</div>
+                        <h3 class="project-title">Arquitectura Empresarial para Retail</h3>
+                        <p class="project-tech">
+                            TOGAF · BPMN · Modelos As-Is / To-Be
+                        </p>
+                        <p class="project-desc">
+                            Ejercicio de arquitectura empresarial para una cadena de retail, 
+                            identificando brechas entre la situación actual y la arquitectura objetivo 
+                            y proponiendo una hoja de ruta de migración.
+                        </p>
+                        <div class="project-footer">
+                            <span class="project-role">Rol: Arquitecto TI (académico)</span>
+                            <a href="#" class="project-link">Ver documento</a>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+                        <div class="project-badge">Riesgos</div>
+                        <h3 class="project-title">Matriz de Riesgos Informáticos</h3>
+                        <p class="project-tech">
+                            COSO · Matrices de riesgo · Controles
+                        </p>
+                        <p class="project-desc">
+                            Identificación de eventos de riesgo, evaluación de impacto y probabilidad, 
+                            propuesta de controles y recomendación de acciones de tratamiento.
+                        </p>
+                        <div class="project-footer">
+                            <span class="project-role">Rol: Analista de Riesgos</span>
+                            <a href="#" class="project-link">Ver informe</a>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4 -->
+                    <article class="project-card">
+                        <div class="project-badge">Frontend</div>
+                        <h3 class="project-title">Sitio Web Corporativo</h3>
+                        <p class="project-tech">
+                            HTML · CSS · JavaScript · Diseño responsivo
+                        </p>
+                        <p class="project-desc">
+                            Landing corporativa para una empresa de procesamiento de alimentos, con 
+                            estructura clara, secciones informativas y diseño adaptable a móviles.
+                        </p>
+                        <div class="project-footer">
+                            <span class="project-role">Rol: Frontend / Maquetado</span>
+                            <a href="#" class="project-link">Ver demo</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section contact">
+            <div class="container contact-inner">
+                <div>
+                    <h2 class="section-title">Contacto</h2>
+                    <p class="section-text">
+                        Si te interesa mi perfil o quieres comentar una oportunidad de prácticas, 
+                        proyecto académico o colaboración, puedes escribirme directamente.
+                    </p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-label">Correo</span>
+                            <a href="mailto:correo@ejemplo.com" class="contact-value">denistineohuancas@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="#" class="contact-value">linkedin.com/in/denis-tineo</a>
+                        </li>
+                        <li>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/Djamth" class="contact-value">github.com/denis-tineo</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-card">
+                    <h3>¿Hablamos?</h3>
+                    <p>
+                        Prueba
+                    </p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" type="text" class="form-control" placeholder="Tu nombre" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input id="email" type="email" class="form-control" placeholder="tucorreo@ejemplo.com" />
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" class="form-control" rows="3" placeholder="Escribe tu mensaje"></textarea>
+                        </div>
+                        <button type="button" class="btn-primary btn-block">Enviar (demo)</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Denis Jamil Tineo Huancas</span>
+        </div>
+    </footer>
+
+    <script>
+        // Año actual en el footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Resaltar enlace activo al hacer click
+        const navLinks = document.querySelectorAll(".nav-links a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+            });
+        });
+
+        // Menú responsive simple
+        const navToggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".nav-links");
+
+        navToggle.addEventListener("click", () => {
+            nav.classList.toggle("nav-open");
+            navToggle.classList.toggle("open");
+        });
+
+        // Animación de aparición suave (opcional)
+        const revealElements = document.querySelectorAll(".hero-inner, .about-inner, .portfolio-grid, .contact-inner");
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in-view");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
