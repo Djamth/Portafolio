@@ -53,7 +53,7 @@
                     </p>
 
                     <div class="hero-actions">
-                        <!-- Cambia el href cuando tengas tu CV -->
+                        
                         <a href="#" class="btn-primary">Download CV</a>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <!-- Foto derecha -->
                 <div class="hero-photo">
                     <div class="photo-frame">
-                        <!-- Reemplaza la ruta por tu propia foto -->
+                     
                         <img src="DJ.jpeg" alt="Foto de Denis Jamil" />
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         </p>
                         <div class="project-footer">
                             <span class="project-role">Rol: Backend Developer</span>
-                            <!-- Cambia # por tu repo cuando lo publiques -->
+                           
                             <a href="#" class="project-link">Ver código</a>
                         </div>
                     </article>
@@ -274,7 +274,6 @@
         // Año actual en el footer
         document.getElementById("year").textContent = new Date().getFullYear();
 
-        // Resaltar enlace activo al hacer click
         const navLinks = document.querySelectorAll(".nav-links a");
         navLinks.forEach(link => {
             link.addEventListener("click", () => {
@@ -292,7 +291,7 @@
             navToggle.classList.toggle("open");
         });
 
-        // Animación de aparición suave (opcional)
+      
         const revealElements = document.querySelectorAll(".hero-inner, .about-inner, .portfolio-grid, .contact-inner");
 
         const observer = new IntersectionObserver(
