@@ -29,13 +29,13 @@ if (contactForm) {
         const email = contactForm.querySelector('input[type="email"]').value;
         const message = contactForm.querySelector('textarea').value;
         
-     
+     //mensaje con sweet alert
         if (name && email && message) {
            
-            alert('¡Mensaje enviado! Pronto te contactaremos.');
+            Swal.fire('¡Mensaje enviado! Pronto te contactaremos.');
             contactForm.reset();
         } else {
-            alert('Por favor completa todos los campos.');
+            Swal.fire('Por favor completa todos los campos.');
         }
     });
 }
