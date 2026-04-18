@@ -1,6 +1,7 @@
 // ========== Menú Responsivo ==========
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const btncv = document.querySelector('#btncv');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
@@ -8,6 +9,19 @@ if (hamburger) {
         navLinks.classList.toggle('active');
     });
 }
+//mensaje con sweet alert al hacer clic en el botón de descargar CV
+if (btncv) {
+    btncv.addEventListener('click', () => {
+        Swal.fire({
+            title: 'Descargando CV...',
+            text: 'Gracias por tu interés.',
+            icon: 'success',
+            timer: 2000,
+            showConfirmButton: false
+        });
+    });
+}
+document.addEventListener('click', (e) => {
 
 // Cerrar menú al hacer clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -16,6 +30,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
 
 // ========== Formulario de Contacto ==========
 const contactForm = document.querySelector('.contact-form');
@@ -139,4 +154,4 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
+});
