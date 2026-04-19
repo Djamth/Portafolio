@@ -21,7 +21,7 @@ if (btncv) {
         });
     });
 }
-document.addEventListener('click', (e) => {
+
 
 // Cerrar menú al hacer clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -40,9 +40,9 @@ if (contactForm) {
         e.preventDefault();
         
         // Obtener valores del formulario
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = contactForm.querySelector('input[type="text"]').value.trim();
+        const email = contactForm.querySelector('input[type="email"]').value.trim();
+        const message = contactForm.querySelector('textarea').value.trim();
         
      //mensaje con sweet alert
         if (name && email && message) {
@@ -100,40 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== Contar Números Animados ==========
-const animateNumbers = () => {
-    const stats = document.querySelectorAll('.stat-box h3');
-    
-    stats.forEach(stat => {
-        const target = parseInt(stat.innerText);
-        let current = 0;
-        const increment = target / 50;
-        
-        const updateCount = () => {
-            if (current < target) {
-                current += increment;
-                stat.innerText = Math.ceil(current) + (stat.innerText.includes('+') ? '+' : '');
-            } else {
-                stat.innerText = target + (stat.innerText.includes('+') ? '+' : '');
-            }
-        };
-        
-        // Solo animar cuando el elemento sea visible
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const interval = setInterval(updateCount, 30);
-                    setTimeout(() => clearInterval(interval), 1500);
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        observer.observe(stat);
-    });
-};
 
-animateNumbers();
 
 // ========== Agregar clase activa a navegación según scroll ==========
 window.addEventListener('scroll', () => {
@@ -154,4 +121,4 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-});
+
