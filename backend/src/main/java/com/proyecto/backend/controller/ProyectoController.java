@@ -1,16 +1,32 @@
 package com.proyecto.backend.controller;
+
+import com.proyecto.backend.DTO.CertificadoDTO;
 import com.proyecto.backend.DTO.proyectoDTO;
+import com.proyecto.backend.service.CertificadoService;
 import com.proyecto.backend.service.proyectoService;
 import java.util.List;
-@RestController
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api") 
 public class ProyectoController {
-    private proyectoService proyectoService;
+    private final proyectoService proyectoService;
+    private final CertificadoService certificadoService;
 
-    public ProyectoController(proyectoService proyectoService) {
+    public ProyectoController(proyectoService proyectoService, CertificadoService certificadoService) {
         this.proyectoService = proyectoService;
+        this.certificadoService = certificadoService;
     }
+
     @GetMapping("/proyectos")
     public List<proyectoDTO> getAllProyectos() {
         return proyectoService.getAllProyectos();
@@ -27,5 +43,6 @@ public class ProyectoController {
     public void deleteProyecto(@PathVariable Long id) {
         proyectoService.deleteProyecto(id);
     }
-    
+
+
 }

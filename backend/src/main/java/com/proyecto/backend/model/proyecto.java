@@ -1,12 +1,14 @@
 package com.proyecto.backend.model;
+
 import java.time.LocalDateTime; 
 import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.*;
+
 @Data
 @Entity
 @Table(name = "proyecto")
-//modelo de proyecto para el portafolio
 public class proyecto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,8 +16,13 @@ public class proyecto {
     private String nombre;
     private String descripcion;
     private String url;
-    private String imagen;
+
+    @ElementCollection
+    private List<String> imagenes;
+
+    @ElementCollection
     private List<String> tecnologiasutilizadas;
+
     private LocalDateTime fechacreacion;
     private LocalDateTime fechaactualizacion;
 

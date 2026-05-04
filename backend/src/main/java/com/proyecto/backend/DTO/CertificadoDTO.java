@@ -1,15 +1,13 @@
 package com.proyecto.backend.DTO;
 
-import java.util.List;
-
 import lombok.Data;
 
 @Data
-public class proyectoDTO {
+public class CertificadoDTO {
     private Long id;
     private String nombre;
+    private String institucion;
     private String descripcion;
+    private String fecha;
     private String url;
-    private List<String> imagenes;
-    private List<String> tecnologiasutilizadas;
 }

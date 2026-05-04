@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 @Service
 public class proyectoService {
-    private ProyectoRepository proyectoRepository;
-    private proyectoMapper proyectoMapper;
+    private final ProyectoRepository proyectoRepository;
+    private final proyectoMapper proyectoMapper;
 
     public proyectoService(ProyectoRepository proyectoRepository, proyectoMapper proyectoMapper) {
         this.proyectoRepository = proyectoRepository;
@@ -29,8 +29,7 @@ public class proyectoService {
     public long countProyectos() {
         return proyectoRepository.count();
     }
-    void deleteProyecto(Long id) {
+    public void deleteProyecto(Long id) {
         proyectoRepository.deleteById(id);
     }
-
 }
