@@ -16,7 +16,8 @@ En la configuracion del proyecto existente de Vercel:
 
 1. Cambia `Root Directory` de `frontend` a `frontendv1.0.2`.
 2. Agrega `NEXT_PUBLIC_SITE_URL` con la URL publica final, por ejemplo `https://tu-dominio.com`.
-3. Ejecuta un nuevo deployment.
+3. Confirma que `Framework Preset` sea `Next.js` y deja `Output Directory` sin override.
+4. Ejecuta un nuevo deployment.
 
 La variable `NEXT_PUBLIC_SITE_URL` se utiliza para canonical URL, sitemap, robots y datos estructurados. Si todavia no tienes dominio propio, usa la URL de produccion asignada por Vercel.
 
