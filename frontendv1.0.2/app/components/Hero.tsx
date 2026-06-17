@@ -42,7 +42,7 @@ export default function Hero() {
             <a aria-label="GitHub" href="https://github.com/djamth" target="_blank" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
               <Icon name="github" />
             </a>
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/denistineo" target="_blank" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/denis-jamil-tineo-huancas" target="_blank" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
               <Icon name="linkedin" />
             </a>
             <a aria-label="Email" href="mailto:denistineohuancas@gmail.com" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
