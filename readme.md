@@ -1,6 +1,6 @@
 #
 
-Este es un portafolio web personal desarrollado utilizando HTML, CSS y JavaScript. El objetivo de este proyecto es mostrar mis habilidades y proyectos de una manera atractiva y profesional.
+Este es un portafolio web personal desarrollado utilizando Next js , Tailwind css  y JavaScript. El objetivo de este proyecto es mostrar mis habilidades y proyectos de una manera atractiva y profesional.
 
 ## Características
 - Diseño responsivo: El portafolio se adapta a diferentes tamaños de pantalla, lo que garantiza una experiencia de usuario óptima en dispositivos móviles y de escritorio.
