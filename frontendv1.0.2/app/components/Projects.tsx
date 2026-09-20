@@ -1,9 +1,17 @@
+'use client';
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
 import { certificates, projects } from "../lib/portfolio";
 
+const technologies = ["Todas", ...Array.from(new Set(projects.flatMap((project) => project.tecnologiasutilizadas)))];
+
 export default function Projects() {
+  const [selectedTechnology, setSelectedTechnology] = useState("Todas");
+  const visibleProjects = selectedTechnology === "Todas" ? projects : projects.filter((project) => project.tecnologiasutilizadas.includes(selectedTechnology));
+
   return (
     <section id="projects" className="bg-[#0b1220] py-24 text-[#f5faff]">
       <div className="section-shell">
@@ -13,8 +21,16 @@ export default function Projects() {
           <p className="mt-4 text-sm leading-6 text-[#a8b8cc]">Proyectos donde aplico backend, integraciones y una interfaz pensada para usuarios reales.</p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
+        <div aria-label="Filtrar proyectos por tecnología" role="group" className="mt-10 flex flex-wrap justify-center gap-2">
+          {technologies.map((technology) => {
+            const active = selectedTechnology === technology;
+            return <button key={technology} type="button" aria-pressed={active} onClick={() => setSelectedTechnology(technology)} className={`rounded-full border px-4 py-2 text-xs font-bold transition-colors ${active ? "border-[#00d9ff] bg-[#00d9ff] text-[#080d17]" : "border-white/15 bg-[#111c2e] text-[#a8b8cc] hover:border-cyan-300/50 hover:text-[#f5faff]"}`}>{technology}</button>;
+          })}
+        </div>
+        <p aria-live="polite" className="mt-5 text-center text-xs text-[#a8b8cc]">{visibleProjects.length} {visibleProjects.length === 1 ? "proyecto encontrado" : "proyectos encontrados"}</p>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {visibleProjects.map((project) => (
             <article key={project.slug} className="group overflow-hidden rounded-2xl border border-white/10 bg-[#111c2e] shadow-[0_18px_45px_rgba(0,0,0,0.16)] transition duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:shadow-[0_24px_55px_rgba(0,217,255,0.08)] motion-reduce:transform-none">
               <Link href={`/proyectos/${project.slug}`} className="block" aria-label={`Ver detalles de ${project.nombre}`}>
                 <div className="relative h-56 overflow-hidden bg-[#172b3b]">
