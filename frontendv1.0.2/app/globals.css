@@ -36,6 +36,7 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      transform: none !important;
     }
   }
 }
@@ -65,5 +66,23 @@
       radial-gradient(ellipse 68% 82% at 50% 42%, #000 58%, rgba(0, 0, 0, 0.88) 73%, transparent 100%);
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
+  }
+}
+
+/* Subtle depth on project cards only; certificates and touch layouts remain flat. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #projects article {
+    transform: perspective(1100px) rotateX(0deg) rotateY(0deg) translateY(0);
+    transform-style: preserve-3d;
+    transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+    will-change: transform;
+  }
+
+  #projects article:hover {
+    transform: perspective(1100px) rotateX(2deg) rotateY(-3deg) translateY(-7px);
+  }
+
+  #projects article:focus-within {
+    transform: perspective(1100px) rotateX(0deg) rotateY(0deg) translateY(-3px);
   }
 }
