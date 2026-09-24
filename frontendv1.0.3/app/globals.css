@@ -199,3 +199,45 @@ nav[aria-label="Navegación principal"] { animation: v103-nav-in 700ms cubic-bez
   .v103-hero .section-shell > div:nth-child(2),
   nav[aria-label="Navegación principal"] { animation: none; }
 }
+
+/* v1.0.3 ambient premium motion */
+@keyframes v103-aurora-breathe {
+  0%,100% { transform: translate3d(0, 2%, 0) scale(1); opacity: .82; }
+  50% { transform: translate3d(0, -2%, 0) scale(1.055); opacity: 1; }
+}
+@keyframes v103-ring-a { to { transform: rotateX(72deg) rotateY(378deg) translateZ(12px); } }
+@keyframes v103-ring-b { to { transform: rotateY(432deg) rotateZ(22deg) translateZ(-10px); } }
+@keyframes v103-ring-c { to { transform: rotateX(402deg) rotateY(48deg) translateZ(20px); } }
+@keyframes v103-glow-pulse {
+  0%,100% { box-shadow: 0 0 0 rgba(139,92,246,0); }
+  50% { box-shadow: 0 0 30px rgba(139,92,246,.12); }
+}
+
+.v103-aurora { transform-origin: 50% 100%; animation: v103-aurora-breathe 8s ease-in-out infinite; will-change: transform, opacity; }
+.v103-hero .hero-orb-ring-a { animation: v103-ring-a 24s linear infinite; }
+.v103-hero .hero-orb-ring-b { animation: v103-ring-b 31s linear infinite reverse; }
+.v103-hero .hero-orb-ring-c { animation: v103-ring-c 38s linear infinite; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  a.rounded-full, button.rounded-full {
+    transition-property: transform, background-color, border-color, color, box-shadow, opacity;
+    transition-duration: 280ms;
+    transition-timing-function: cubic-bezier(.2,.75,.2,1);
+  }
+  a.rounded-full:hover, button.rounded-full:hover { transform: translateY(-2px); }
+  #skills .group:hover { box-shadow: 0 18px 50px rgba(99,61,220,.13); }
+  #experience article:hover { transform: translateX(5px); box-shadow: 0 18px 55px rgba(71,43,156,.1); }
+  #contact form:focus-within { border-color: rgba(143,112,240,.38); box-shadow: 0 0 45px rgba(111,61,255,.09); }
+  #contact input:focus, #contact textarea:focus { background: rgba(255,255,255,.055); box-shadow: 0 0 24px rgba(139,92,246,.08); }
+}
+#skills .group, #experience article, #contact form, #contact input, #contact textarea {
+  transition: transform 320ms cubic-bezier(.2,.75,.2,1), border-color 320ms ease, background-color 320ms ease, box-shadow 320ms ease;
+}
+#skills .group:hover img { filter: drop-shadow(0 0 12px rgba(174,148,255,.32)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .v103-aurora,
+  .v103-hero .hero-orb-ring-a,
+  .v103-hero .hero-orb-ring-b,
+  .v103-hero .hero-orb-ring-c { animation: none; }
+}
