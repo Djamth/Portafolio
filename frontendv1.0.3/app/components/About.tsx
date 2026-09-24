@@ -1,36 +1,35 @@
 import Icon from "./Icon";
 import ScrollReveal from "./ScrollReveal";
 
-const highlights = [
-  ["APIs REST", "Diseño servicios claros, mantenibles y listos para integrarse."],
-  ["Arquitectura TI", "Conecto la parte técnica con necesidades reales del negocio."],
-  ["Aprendizaje continuo", "Cada proyecto es una oportunidad para construir mejor."],
-];
-
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-[#f7f9fe] py-24 text-[#1c2943]">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_85%_20%,rgba(219,225,255,.5),transparent_38%)]" />
-      <div className="section-shell relative grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+    <section id="about" className="relative overflow-hidden bg-[#02020f] py-28 text-white">
+      <div className="section-shell relative">
         <ScrollReveal>
-        <div>
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#345be8]">Sobre mí</p>
-          <h2 className="mt-3 text-4xl font-black tracking-[-0.05em] text-[#1c2943] sm:text-5xl">Código con propósito.</h2>
-          <p className="mt-6 leading-7 text-[#63718b]">Soy estudiante de Ingeniería de Sistemas con especial interés por el desarrollo backend, la arquitectura de TI y la calidad del software. Disfruto entender el problema antes de escribir la solución.</p>
-          <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-black text-[#345be8] transition hover:text-[#2547bd]">Conversemos <Icon name="arrow" className="size-4" /></a>
-        </div>
+          <div className="grid gap-12 lg:grid-cols-[.78fr_1.22fr] lg:items-center">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#9f83ff]">01 / Sobre mí</p>
+              <h2 className="mt-5 max-w-lg text-4xl font-semibold leading-[.98] tracking-[-.055em] sm:text-6xl">Pienso en el problema <span className="text-white/35">antes de escribir el código.</span></h2>
+              <p className="mt-6 max-w-md text-sm leading-7 text-white/48">Soy estudiante de Ingeniería de Sistemas con especial interés por backend, arquitectura TI y calidad de software. Me enfoco en construir soluciones entendibles, mantenibles y útiles.</p>
+              <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-xs font-bold text-[#b49cff] transition hover:text-white">Conversemos <Icon name="arrow" className="size-4" /></a>
+            </div>
+            <div className="relative overflow-hidden rounded-[30px] border border-white/10 bg-[#080817] p-5 shadow-[0_35px_90px_rgba(0,0,0,.35)] sm:p-8">
+              <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-[radial-gradient(ellipse_at_bottom,rgba(111,61,255,.35),transparent_70%)]" />
+              <div className="relative flex items-center gap-2 border-b border-white/8 pb-4 text-[10px] text-white/30"><span className="size-2 rounded-full bg-white/15" /><span className="size-2 rounded-full bg-white/15" /><span className="size-2 rounded-full bg-white/15" /><span className="ml-3 font-mono">developer.ts</span></div>
+              <pre className="relative mt-7 overflow-x-auto font-mono text-[11px] leading-7 text-white/45 sm:text-xs"><code><span className="text-[#b49cff]">const</span> developer = {"{"}
+{"  "}name: <span className="text-[#d9d0ff]">&quot;Denis Jamil&quot;</span>,
+{"  "}focus: [<span className="text-[#d9d0ff]">&quot;Backend&quot;</span>, <span className="text-[#d9d0ff]">&quot;APIs REST&quot;</span>],
+{"  "}stack: [<span className="text-[#d9d0ff]">&quot;Java&quot;</span>, <span className="text-[#d9d0ff]">&quot;Spring Boot&quot;</span>],
+{"  "}database: <span className="text-[#d9d0ff]">&quot;PostgreSQL&quot;</span>,
+{"  "}mindset: <span className="text-[#d9d0ff]">&quot;learn → build → improve&quot;</span>,
+{"  "}available: <span className="text-[#8ee7c5]">true</span>
+{"}"}</code></pre>
+              <div className="relative mt-8 grid gap-3 sm:grid-cols-3">
+                {["APIs mantenibles","Arquitectura TI","Aprendizaje continuo"].map((item,index)=><div key={item} className="rounded-2xl border border-white/8 bg-white/[.035] p-4"><span className="font-mono text-[9px] text-[#9f83ff]">0{index+1}</span><strong className="mt-2 block text-xs text-white/72">{item}</strong></div>)}
+              </div>
+            </div>
+          </div>
         </ScrollReveal>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {highlights.map(([title, description], index) => (
-            <ScrollReveal key={title} delay={index * 110}>
-            <article key={title} className="rounded-[24px] border border-white/90 bg-white/70 p-6 shadow-[0_16px_40px_rgba(53,76,120,.07)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-[#bdc9f2] hover:shadow-[0_20px_44px_rgba(53,76,120,.12)] motion-reduce:transform-none">
-              <span className="grid size-11 place-items-center rounded-xl border border-[#d8e0fa] bg-[#edf1ff] text-[#345be8]"><Icon name={index === 0 ? "code" : index === 1 ? "briefcase" : "star"} /></span>
-              <h3 className="mt-5 font-black text-[#1c2943]">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#63718b]">{description}</p>
-            </article>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   );
