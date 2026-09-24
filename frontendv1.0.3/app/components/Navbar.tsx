@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 
 const links = [
@@ -11,8 +11,35 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const show = () => {
+      setVisible(true);
+      if (timer.current) clearTimeout(timer.current);
+      timer.current = setTimeout(() => { if (!open) setVisible(false); }, 900);
+    };
+    const onScroll = () => show();
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.clientY <= 72) {
+        setVisible(true);
+        if (timer.current) clearTimeout(timer.current);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("pointermove", onPointerMove);
+      if (timer.current) clearTimeout(timer.current);
+    };
+  }, [open]);
+
+  useEffect(() => { if (open) setVisible(true); }, [open]);
+
   return (
-    <nav aria-label="Navegación principal" className="fixed inset-x-0 top-0 z-50 px-5 pt-5 text-white">
+    <nav aria-label="Navegación principal" data-visible={visible || open} onMouseEnter={() => setVisible(true)} className="v103-navbar fixed inset-x-0 top-0 z-50 px-5 pt-5 text-white">
       <div className="mx-auto flex h-12 max-w-6xl items-center justify-between">
         <a href="/#home" className="flex items-center gap-2 text-xs font-black tracking-[-.02em]" aria-label="Denis Jamil, ir al inicio"><span className="grid size-7 place-items-center rounded-full border border-white/20 bg-white/10 text-[10px] backdrop-blur-xl">DJ</span> Denis Jamil</a>
         <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-[#080817]/60 p-1 shadow-2xl backdrop-blur-2xl lg:flex">
