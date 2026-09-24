@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 
-export default function ScrollReveal({ children, className = "", delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
+type Direction = "up" | "left" | "right" | "scale";
+
+export default function ScrollReveal({ children, className = "", delay = 0, direction = "up" }: { children: ReactNode; className?: string; delay?: number; direction?: Direction }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,10 +20,10 @@ export default function ScrollReveal({ children, className = "", delay = 0 }: { 
         element.dataset.visible = "true";
         observer.disconnect();
       }
-    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.12, rootMargin: "0px 0px -7% 0px" });
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
-  return <div ref={ref} className={`scroll-reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>{children}</div>;
+  return <div ref={ref} data-direction={direction} className={`scroll-reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>{children}</div>;
 }
