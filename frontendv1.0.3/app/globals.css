@@ -241,3 +241,26 @@ nav[aria-label="Navegación principal"] { animation: v103-nav-in 700ms cubic-bez
   .v103-hero .hero-orb-ring-b,
   .v103-hero .hero-orb-ring-c { animation: none; }
 }
+
+/* v1.0.3 full-screen sections + intelligent navbar */
+#home, #about, #skills, #projects, #experience, #contact {
+  min-height: 100svh;
+  scroll-margin-top: 0;
+}
+#about, #skills, #experience {
+  display: flex;
+  align-items: center;
+}
+#about > .section-shell, #skills > .section-shell, #experience > .section-shell { width: 100%; }
+
+.v103-navbar {
+  transform: translate3d(0,-125%,0);
+  opacity: 0;
+  transition: transform 420ms cubic-bezier(.2,.75,.2,1), opacity 280ms ease;
+  will-change: transform, opacity;
+}
+.v103-navbar[data-visible="true"] { transform: translate3d(0,0,0); opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .v103-navbar { transition: none; }
+}
