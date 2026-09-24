@@ -18,20 +18,11 @@ export default function Home() {
     jobTitle: "Backend Developer Java & Spring Boot",
     description: siteConfig.description,
     sameAs: [siteConfig.github, siteConfig.linkedin],
-    knowsAbout: [
-      "Java",
-      "Spring Boot",
-      "APIs REST",
-      "PostgreSQL",
-      "Next.js",
-      "TypeScript",
-      "Desarrollo Backend",
-      "Ingeniería de Sistemas",
-    ],
+    knowsAbout: ["Java","Spring Boot","APIs REST","PostgreSQL","Next.js","TypeScript","Desarrollo Backend","Ingeniería de Sistemas"],
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#fbfcff] text-[#11142b]">
+    <main className="min-h-screen overflow-hidden bg-[#02020f] text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Navbar />
       <Hero />
