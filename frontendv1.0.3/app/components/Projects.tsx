@@ -32,7 +32,7 @@ export default function Projects() {
 
         <div className="mt-12 grid gap-8">
           {visibleProjects.map((project, index) => (
-            <ScrollReveal key={project.slug}>
+            <ScrollReveal key={project.slug} direction={index % 2 === 0 ? "left" : "right"}>
               <article className="group relative overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] shadow-[0_32px_90px_rgba(0,0,0,.35)]">
                 <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%] bg-[radial-gradient(ellipse_at_50%_115%,rgba(123,67,255,.62),rgba(72,35,168,.18)_42%,transparent_72%)] opacity-70 transition duration-500 group-hover:opacity-100" />
                 <div className={`relative grid min-h-[500px] gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center lg:p-12 ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
@@ -57,7 +57,7 @@ export default function Projects() {
 
         <div id="certificates" className="mt-28">
           <ScrollReveal className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#a88dff]">04 / Certificados</p><h2 className="mt-3 text-3xl font-semibold tracking-[-.045em]">Aprendizaje continuo.</h2></div><p className="max-w-sm text-xs leading-6 text-white/35">Formación complementaria que fortalece mi perfil técnico.</p></ScrollReveal>
-          <div className="mt-8 grid gap-3 md:grid-cols-2">{certificates.map((certificate,index)=><ScrollReveal key={certificate.id ?? certificate.nombre} delay={(index%2)*90}><a href={certificate.url} target="_blank" rel="noopener noreferrer" className="flex min-h-36 gap-4 rounded-[22px] border border-white/9 bg-[#080817] p-5 transition hover:border-[#8f70f0]/40 hover:bg-[#0c0b20]"><span className="grid size-10 shrink-0 place-items-center rounded-xl border border-[#8f70f0]/20 bg-[#8f70f0]/10 text-[#ad96ff]"><Icon name="graduation" className="size-4" /></span><span><strong className="block text-sm text-white/78">{certificate.nombre}</strong><span className="mt-1 block font-mono text-[9px] text-[#a88dff]">{certificate.institucion} · {certificate.fecha}</span><span className="mt-3 block text-xs leading-5 text-white/35">{certificate.descripcion}</span></span></a></ScrollReveal>)}</div>
+          <div className="mt-8 grid gap-3 md:grid-cols-2">{certificates.map((certificate,index)=><ScrollReveal key={certificate.id ?? certificate.nombre} delay={(index%2)*90} direction="scale"><a href={certificate.url} target="_blank" rel="noopener noreferrer" className="flex min-h-36 gap-4 rounded-[22px] border border-white/9 bg-[#080817] p-5 transition hover:border-[#8f70f0]/40 hover:bg-[#0c0b20]"><span className="grid size-10 shrink-0 place-items-center rounded-xl border border-[#8f70f0]/20 bg-[#8f70f0]/10 text-[#ad96ff]"><Icon name="graduation" className="size-4" /></span><span><strong className="block text-sm text-white/78">{certificate.nombre}</strong><span className="mt-1 block font-mono text-[9px] text-[#a88dff]">{certificate.institucion} · {certificate.fecha}</span><span className="mt-3 block text-xs leading-5 text-white/35">{certificate.descripcion}</span></span></a></ScrollReveal>)}</div>
         </div>
       </div>
     </section>
