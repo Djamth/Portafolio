@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  --background: #f6f8fc;
-  --surface: #ffffff;
-  --accent: #345be8;
-  --foreground: #172033;
-  --muted: #59657b;
+  color-scheme: dark;
+  --background: #02020f;
+  --surface: #080817;
+  --accent: #8b5cf6;
+  --foreground: #f7f5ff;
+  --muted: #9a97ad;
 }
 
 @layer base {
   html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
   body { background: var(--background); color: var(--foreground); }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-  ::selection { background: #c9d5ff; color: #172033; }
+  ::selection { background: #7c3aed; color: #ffffff; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after {
@@ -132,4 +132,40 @@
     transition: none;
     will-change: auto;
   }
+}
+
+.v103-hero { background: #02020f; }
+.v103-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 54px 54px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 82%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 82%);
+}
+.v103-aurora {
+  background:
+    radial-gradient(ellipse at 50% 115%, rgba(199,179,255,.95) 0%, rgba(125,77,255,.82) 23%, rgba(87,39,210,.48) 43%, rgba(15,8,55,.08) 70%, transparent 82%);
+  filter: saturate(115%);
+}
+.v103-hero .hero-orb {
+  filter: drop-shadow(0 0 45px rgba(128,77,255,.3)) drop-shadow(0 35px 60px rgba(0,0,0,.45));
+}
+.v103-hero .hero-orb-core {
+  background:
+    radial-gradient(circle at 28% 22%, rgba(238,232,255,.92), rgba(147,112,255,.42) 17%, rgba(55,37,110,.8) 43%, rgba(8,8,27,.98) 74%);
+  box-shadow:
+    inset -30px -35px 65px rgba(0,0,0,.75),
+    inset 12px 12px 30px rgba(211,197,255,.3),
+    0 0 100px rgba(113,67,255,.2);
+}
+.v103-hero .hero-orb-ring {
+  border-color: rgba(169,139,255,.34);
+  box-shadow: 0 0 28px rgba(126,79,255,.18), inset 0 0 18px rgba(196,178,255,.08);
+}
+.v103-hero .hero-orb::before {
+  background: conic-gradient(from 30deg, transparent 0 12%, rgba(191,170,255,.3) 19%, transparent 31% 56%, rgba(112,71,255,.28) 67%, transparent 78%);
+}
+.v103-hero .hero-orb::after {
+  background: radial-gradient(circle, rgba(177,153,255,.28), rgba(105,67,226,.12) 55%, transparent 72%);
 }
