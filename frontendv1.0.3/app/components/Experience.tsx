@@ -2,33 +2,20 @@ import Icon from "./Icon";
 import ScrollReveal from "./ScrollReveal";
 
 const items = [
-  { title: "Ingeniería de Sistemas e Informática", company: "Universidad Tecnológica del Perú", date: "2022 - Actualidad", description: "Formación académica en desarrollo de software, arquitectura de sistemas y tecnologías innovadoras." },
+  { title: "Ingeniería de Sistemas e Informática", company: "Universidad Tecnológica del Perú", date: "2022 — Actualidad", description: "Formación académica en desarrollo de software, arquitectura de sistemas y tecnologías innovadoras." },
   { title: "CCNA: Introducción a las redes", company: "Cisco Networking Academy", date: "2025", description: "Fundamentos de conectividad, protocolos y arquitectura de red." },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative overflow-hidden bg-white py-24 text-[#1c2943]">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_10%_30%,rgba(229,233,255,.42),transparent_35%)]" />
+    <section id="experience" className="relative overflow-hidden bg-[#02020f] py-28 text-white">
       <div className="section-shell relative">
-        <ScrollReveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#345be8]">Experiencia</p>
-          <h2 className="mt-3 text-4xl font-black tracking-[-0.05em] text-[#1c2943]">Mi camino hasta ahora</h2>
+        <ScrollReveal className="grid gap-6 lg:grid-cols-2 lg:items-end">
+          <div><p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#a88dff]">05 / Trayectoria</p><h2 className="mt-4 text-4xl font-semibold tracking-[-.055em] sm:text-6xl">Aprender. Construir. <span className="text-white/35">Evolucionar.</span></h2></div>
+          <p className="max-w-md text-sm leading-7 text-white/38 lg:justify-self-end">Mi formación combina ingeniería de software, redes y práctica constante construyendo soluciones.</p>
         </ScrollReveal>
-        <div className="relative mx-auto mt-12 grid max-w-4xl gap-5 before:absolute before:bottom-0 before:left-[22px] before:top-0 before:w-px before:bg-[#ccd6f4]">
-          {items.map((item, index) => (
-            <ScrollReveal key={item.title} delay={index * 130}>
-            <article className="relative grid grid-cols-[46px_1fr] gap-5">
-              <span className="relative z-10 grid size-11 place-items-center rounded-full bg-[#345be8] text-white shadow-[0_8px_20px_rgba(52,91,232,.2)]"><Icon name={index === 0 ? "graduation" : "book"} className="size-5" /></span>
-              <div className="rounded-[24px] border border-[#e3e8f3] bg-white/80 p-6 shadow-[0_14px_36px_rgba(53,76,120,.06)] backdrop-blur-xl transition hover:border-[#bdc9f2]">
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#345be8]">{item.date}</p>
-                <h3 className="mt-2 text-xl font-black text-[#1c2943]">{item.title}</h3>
-                <p className="mt-1 text-sm font-bold text-[#526079]">{item.company}</p>
-                <p className="mt-3 text-sm leading-6 text-[#63718b]">{item.description}</p>
-              </div>
-            </article>
-            </ScrollReveal>
-          ))}
+        <div className="mt-14 grid gap-4">
+          {items.map((item,index)=><ScrollReveal key={item.title} delay={index*100}><article className="group grid gap-5 rounded-[26px] border border-white/9 bg-[#080817] p-6 transition hover:border-[#8f70f0]/35 sm:grid-cols-[130px_1fr_50px] sm:items-center sm:p-8"><p className="font-mono text-[9px] uppercase tracking-[.15em] text-[#a88dff]">{item.date}</p><div><h3 className="text-xl font-semibold tracking-[-.025em] text-white/82">{item.title}</h3><p className="mt-1 text-xs font-semibold text-white/35">{item.company}</p><p className="mt-3 max-w-2xl text-xs leading-6 text-white/38">{item.description}</p></div><span className="grid size-10 place-items-center rounded-full border border-white/10 bg-white/[.035] text-white/40 transition group-hover:border-[#8f70f0]/35 group-hover:text-[#b39dff]"><Icon name={index===0?"graduation":"book"} className="size-4" /></span></article></ScrollReveal>)}
         </div>
       </div>
     </section>
