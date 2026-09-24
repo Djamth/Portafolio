@@ -169,3 +169,33 @@
 .v103-hero .hero-orb::after {
   background: radial-gradient(circle, rgba(177,153,255,.28), rgba(105,67,226,.12) 55%, transparent 72%);
 }
+
+/* v1.0.3 cinematic entrance language */
+.scroll-reveal[data-direction="left"] { transform: translate3d(-42px, 8px, 0) scale(.985); }
+.scroll-reveal[data-direction="right"] { transform: translate3d(42px, 8px, 0) scale(.985); }
+.scroll-reveal[data-direction="scale"] { transform: translate3d(0, 18px, 0) scale(.94); }
+.scroll-reveal[data-visible="true"][data-direction] { transform: translate3d(0, 0, 0) scale(1); }
+
+@keyframes v103-hero-copy-in {
+  from { opacity: 0; transform: translate3d(0, 28px, 0); filter: blur(7px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes v103-hero-object-in {
+  from { opacity: 0; transform: translate3d(0, 38px, 0) scale(.9); filter: blur(12px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes v103-nav-in {
+  from { opacity: 0; transform: translate3d(0, -14px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.v103-hero .section-shell > div:first-child { animation: v103-hero-copy-in 900ms cubic-bezier(.2,.75,.2,1) 120ms both; }
+.v103-hero .section-shell > div:nth-child(2) { animation: v103-hero-object-in 1100ms cubic-bezier(.2,.75,.2,1) 260ms both; }
+nav[aria-label="Navegación principal"] { animation: v103-nav-in 700ms cubic-bezier(.2,.75,.2,1) 80ms both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal[data-direction],
+  .scroll-reveal[data-visible="true"][data-direction] { transform: none; }
+  .v103-hero .section-shell > div:first-child,
+  .v103-hero .section-shell > div:nth-child(2),
+  nav[aria-label="Navegación principal"] { animation: none; }
+}
