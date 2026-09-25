@@ -8,7 +8,7 @@ const items = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="v103-scene-bg v103-scene-bg-alt relative overflow-hidden py-28 text-white">
+    <section id="experience" className="relative overflow-hidden bg-[#02020f] py-28 text-white">
       <div className="section-shell relative">
         <ScrollReveal className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <div><p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#a88dff]">05 / Trayectoria</p><h2 className="mt-4 text-4xl font-semibold tracking-[-.055em] sm:text-6xl">Aprender. Construir. <span className="text-white/35">Evolucionar.</span></h2></div>
