@@ -5,7 +5,7 @@ const skills = [["Java","java"],["Spring","spring"],["JavaScript","js"],["TypeSc
 
 export default function Skills() {
   return (
-    <section id="skills" className="v103-scene-bg v103-scene-bg-soft relative overflow-hidden pb-28 pt-8 text-white">
+    <section id="skills" className="relative overflow-hidden bg-[#02020f] pb-28 pt-8 text-white">
       <div className="section-shell relative">
         <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] px-5 py-16 shadow-[0_30px_90px_rgba(0,0,0,.32)] sm:px-10 lg:px-14">
           <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[58%] bg-[radial-gradient(ellipse_at_50%_115%,rgba(133,78,255,.62),rgba(77,38,174,.2)_38%,transparent_72%)]" />
