@@ -267,3 +267,33 @@
 
 /* Keep the one-time navbar intro from overriding its runtime hide/show transform. */
 .v103-navbar { animation-fill-mode: none; }
+
+/* v1.0.3 page-like vertical navigation */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+#home, #about, #skills, #experience, #contact {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+#projects { scroll-snap-align: none; }
+#projects .project-scene {
+  min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+#certificates {
+  min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-height: 720px), (max-width: 767px) {
+  html { scroll-snap-type: y proximity; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-snap-type: y proximity; }
+}
