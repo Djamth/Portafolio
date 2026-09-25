@@ -7,12 +7,6 @@ export default function Hero() {
       <div aria-hidden="true" className="absolute inset-0 opacity-[.14] [background-image:linear-gradient(rgba(255,255,255,.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.025)_1px,transparent_1px)] [background-size:80px_80px]" />
 
       <div className="section-shell relative z-10 flex min-h-[100svh] flex-col pt-24">
-        <div className="flex items-center justify-between border-b border-white/8 pb-4 font-mono text-[9px] uppercase tracking-[.22em] text-white/38">
-          <span>Backend Developer</span>
-          <span className="hidden sm:block">Java · Spring Boot · APIs REST</span>
-          <span>Perú</span>
-        </div>
-
         <div className="relative flex flex-1 flex-col">
           <div className="relative z-20 pt-[8vh] text-center">
             <p className="mb-5 font-mono text-[9px] uppercase tracking-[.38em] text-white/35">Software · Systems · Engineering</p>
