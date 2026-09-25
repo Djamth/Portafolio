@@ -65,12 +65,15 @@ export default function HeroOrb() {
   } as CSSProperties;
 
   return (
-    <div ref={sceneRef} className="hero-orb-scene pointer-events-none absolute right-[8%] top-[12%] z-10 size-[75%]" aria-hidden="true">
+    <div ref={sceneRef} className="hero-orb-scene pointer-events-none absolute left-1/2 top-1/2 z-10 size-[88%] -translate-x-1/2 -translate-y-1/2" aria-hidden="true">
       <div className="hero-orb pointer-events-auto relative size-full cursor-grab rounded-full active:cursor-grabbing" style={style} onPointerDown={begin} onPointerMove={move} onPointerUp={stop} onPointerCancel={stop} onLostPointerCapture={stop}>
+        <div className="hero-orb-halo absolute inset-[3%] rounded-full" />
         <div className="hero-orb-core absolute inset-[13%] rounded-full" />
+        <div className="hero-orb-shine absolute inset-[18%] rounded-full" />
         <div className="hero-orb-ring hero-orb-ring-a absolute inset-[8%] rounded-full border border-[#9eaff0]/60" />
         <div className="hero-orb-ring hero-orb-ring-b absolute inset-[8%] rounded-full border border-[#b7a8e8]/50" />
         <div className="hero-orb-ring hero-orb-ring-c absolute inset-[8%] rounded-full border border-[#a9d9dc]/45" />
+        <div className="hero-orb-ring hero-orb-ring-d absolute inset-[4%] rounded-full border border-[#4ba8ff]/25" />
       </div>
     </div>
   );
