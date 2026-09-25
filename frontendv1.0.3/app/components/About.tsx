@@ -1,10 +1,12 @@
 import Icon from "./Icon";
 import ScrollReveal from "./ScrollReveal";
+import HeroOrb from "./HeroOrb";
 
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden bg-[#02020f] py-20 text-white lg:py-24">
       <div className="section-shell relative">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-[18%] top-1/2 hidden size-[520px] -translate-y-1/2 opacity-55 xl:block"><HeroOrb /></div>
         <div className="grid gap-10 lg:grid-cols-[minmax(0,.9fr)_minmax(0,1.35fr)] lg:items-center lg:gap-16">
           <ScrollReveal direction="left">
             <div className="max-w-[32rem]">
