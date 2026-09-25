@@ -403,3 +403,16 @@ html {
     height: min(128vw, 680px);
   }
 }
+
+/* Hero portrait: enlarge the short source image and dissolve its crop into the scene. */
+.v103-hero-portrait {
+  transform: scale(1.16);
+  transform-origin: 50% 100%;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 7%, #000 78%, rgba(0,0,0,.92) 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 7%, #000 78%, rgba(0,0,0,.92) 86%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+@media (max-width: 767px) {
+  .v103-hero-portrait { transform: scale(1.28); }
+}
