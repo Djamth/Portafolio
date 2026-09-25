@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-[#02020f] py-20 text-white lg:py-24">
+    <section id="about" className="v103-scene-bg v103-scene-bg-alt relative overflow-hidden py-20 text-white lg:py-24">
       <div className="section-shell relative">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,.9fr)_minmax(0,1.35fr)] lg:items-center lg:gap-16">
           <ScrollReveal direction="left">
