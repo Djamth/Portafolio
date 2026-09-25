@@ -12,8 +12,8 @@ export default function Contact() {
   function sendEmail(event:FormEvent<HTMLFormElement>){event.preventDefault();const data=new FormData(event.currentTarget);const name=String(data.get("name")??"").trim();const sender=String(data.get("email")??"").trim();const message=String(data.get("message")??"").trim();window.location.href=`mailto:${email}?subject=${encodeURIComponent(`Contacto desde portafolio: ${name}`)}&body=${encodeURIComponent(`Nombre: ${name}\nCorreo: ${sender}\n\n${message}`)}`;}
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#02020f] px-3 pb-3 pt-20 text-white sm:px-5">
-      <div className="relative overflow-hidden bg-[#070717]">
+    <section id="contact" className="v103-scene-bg relative overflow-hidden px-3 pb-3 pt-20 text-white sm:px-5">
+      <div className="relative overflow-hidden bg-transparent">
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[72%] bg-[radial-gradient(ellipse_at_50%_120%,rgba(157,111,255,.92),rgba(105,56,239,.55)_25%,rgba(35,19,88,.15)_58%,transparent_76%)]" />
         <div className="section-shell relative py-24">
           <ScrollReveal className="mx-auto max-w-4xl text-center">
