@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative overflow-hidden bg-[#02020f] px-3 pb-3 pt-20 text-white sm:px-5">
-      <div className="relative overflow-hidden border border-white/10 bg-[#070717]">
+      <div className="relative overflow-hidden bg-[#070717]">
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[72%] bg-[radial-gradient(ellipse_at_50%_120%,rgba(157,111,255,.92),rgba(105,56,239,.55)_25%,rgba(35,19,88,.15)_58%,transparent_76%)]" />
         <div className="section-shell relative py-24">
           <ScrollReveal className="mx-auto max-w-4xl text-center">
