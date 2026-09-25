@@ -385,3 +385,21 @@ html {
 .v103-hero .hero-orb-ring-b { border-color: rgba(114,82,255,.48); }
 .v103-hero .hero-orb-ring-c { border-color: rgba(36,214,255,.28); }
 .v103-hero .hero-orb-ring-d { border-color: rgba(68,128,255,.2); }
+
+/* editorial object-led hero */
+.v103-hero-name {
+  text-shadow: 0 1px 0 rgba(255,255,255,.18), 0 18px 55px rgba(0,0,0,.5);
+}
+.v103-hero .hero-orb-scene {
+  width: min(72vw, 880px);
+  height: min(72vw, 880px);
+}
+.v103-hero .hero-orb {
+  transform-origin: 50% 58%;
+}
+@media (max-width: 767px) {
+  .v103-hero .hero-orb-scene {
+    width: min(128vw, 680px);
+    height: min(128vw, 680px);
+  }
+}
