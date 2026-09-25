@@ -33,7 +33,7 @@ export default function Projects() {
         <div className="mt-12 grid gap-8">
           {visibleProjects.map((project, index) => (
             <ScrollReveal key={`${selectedTechnology}-${project.slug}`} direction="scale">
-              <article className="group relative flex min-h-[100svh] overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] shadow-[0_32px_90px_rgba(0,0,0,.35)]">
+              <article className="project-scene group relative flex min-h-[100svh] overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] shadow-[0_32px_90px_rgba(0,0,0,.35)]">
                 <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%] bg-[radial-gradient(ellipse_at_50%_115%,rgba(123,67,255,.62),rgba(72,35,168,.18)_42%,transparent_72%)] opacity-70 transition duration-500 group-hover:opacity-100" />
                 <div className={`relative grid min-h-full w-full flex-1 content-center gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center lg:p-12 ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <ScrollReveal direction={index % 2 === 0 ? "left" : "right"} delay={120}>
