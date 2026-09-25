@@ -4,7 +4,7 @@ import HeroOrb from "./HeroOrb";
 export default function Hero() {
   return (
     <section id="home" className="v103-hero relative isolate overflow-hidden px-3 pb-5 pt-3 text-white sm:px-5">
-      <div className="relative min-h-[calc(100svh-24px)] overflow-hidden border border-white/10 bg-[#030315]">
+      <div className="relative min-h-[calc(100svh-24px)] overflow-hidden bg-[#030315]">
         <div aria-hidden="true" className="v103-grid absolute inset-0 opacity-30" />
         <div aria-hidden="true" className="v103-aurora absolute inset-x-0 bottom-0 h-[58%]" />
         <div className="section-shell relative z-10 grid min-h-[760px] items-center gap-8 pb-20 pt-28 lg:grid-cols-[.92fr_1.08fr] lg:pb-24 lg:pt-32">
