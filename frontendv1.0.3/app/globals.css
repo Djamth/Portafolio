@@ -355,3 +355,33 @@ html {
   .v103-scene-bg-alt::before { left: -65%; right: auto; }
   .v103-scene-bg::after { width: 110%; opacity: .48; }
 }
+
+/* richer v1.0.3 hero orb */
+.v103-hero .hero-orb { perspective: 1100px; filter: drop-shadow(0 32px 55px rgba(0,0,0,.5)); }
+.v103-hero .hero-orb-halo {
+  background: radial-gradient(circle at 50% 50%, rgba(69,150,255,.18), rgba(77,43,220,.12) 36%, transparent 69%);
+  filter: blur(26px);
+  transform: scale(1.16);
+}
+.v103-hero .hero-orb-core {
+  background:
+    radial-gradient(circle at 31% 24%, rgba(225,240,255,.92) 0 2%, rgba(98,176,255,.58) 8%, transparent 22%),
+    radial-gradient(circle at 35% 31%, rgba(68,159,255,.7), rgba(68,53,221,.74) 34%, rgba(17,12,68,.95) 67%, #030511 84%);
+  box-shadow:
+    inset -34px -28px 55px rgba(0,0,0,.72),
+    inset 18px 12px 34px rgba(112,190,255,.24),
+    0 0 52px rgba(42,119,255,.24),
+    0 0 110px rgba(72,43,220,.16);
+}
+.v103-hero .hero-orb-shine {
+  background: linear-gradient(118deg, transparent 25%, rgba(174,224,255,.13) 40%, rgba(255,255,255,.48) 48%, rgba(82,158,255,.08) 57%, transparent 68%);
+  filter: blur(7px);
+  opacity: .7;
+  transform: rotate(-18deg) scale(.94);
+  mix-blend-mode: screen;
+}
+.v103-hero .hero-orb-ring { box-shadow: 0 0 22px rgba(55,129,255,.14); }
+.v103-hero .hero-orb-ring-a { border-color: rgba(80,157,255,.52); }
+.v103-hero .hero-orb-ring-b { border-color: rgba(114,82,255,.48); }
+.v103-hero .hero-orb-ring-c { border-color: rgba(36,214,255,.28); }
+.v103-hero .hero-orb-ring-d { border-color: rgba(68,128,255,.2); }
