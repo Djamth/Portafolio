@@ -190,14 +190,14 @@
 }
 .v103-hero .section-shell > div:first-child { animation: v103-hero-copy-in 900ms cubic-bezier(.2,.75,.2,1) 120ms both; }
 .v103-hero .section-shell > div:nth-child(2) { animation: v103-hero-object-in 1100ms cubic-bezier(.2,.75,.2,1) 260ms both; }
-nav[aria-label="Navegación principal"] { animation: v103-nav-in 700ms cubic-bezier(.2,.75,.2,1) 80ms both; }
+.v103-navbar { animation: v103-nav-in 700ms cubic-bezier(.2,.75,.2,1) 80ms both; }
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal[data-direction],
   .scroll-reveal[data-visible="true"][data-direction] { transform: none; }
   .v103-hero .section-shell > div:first-child,
   .v103-hero .section-shell > div:nth-child(2),
-  nav[aria-label="Navegación principal"] { animation: none; }
+  .v103-navbar { animation: none; }
 }
 
 /* v1.0.3 ambient premium motion */
@@ -264,3 +264,6 @@ nav[aria-label="Navegación principal"] { animation: v103-nav-in 700ms cubic-bez
 @media (prefers-reduced-motion: reduce) {
   .v103-navbar { transition: none; }
 }
+
+/* Keep the one-time navbar intro from overriding its runtime hide/show transform. */
+.v103-navbar { animation-fill-mode: none; }
