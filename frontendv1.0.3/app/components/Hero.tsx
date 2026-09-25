@@ -13,10 +13,10 @@ export default function Hero() {
             <h1 className="v103-hero-name whitespace-nowrap text-[clamp(4.2rem,12.7vw,12rem)] font-black leading-[.76] tracking-[-.075em] text-white">DENIS JAMIL</h1>
           </div>
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-[-8%] top-[24%] z-10 flex items-end justify-center">
-            <div className="relative h-full w-[min(78vw,760px)]">
+          <div className="pointer-events-none absolute inset-x-0 bottom-[-14%] top-[18%] z-10 flex items-end justify-center">
+            <div className="relative h-full w-[min(96vw,940px)]">
               <div aria-hidden="true" className="absolute bottom-[5%] left-1/2 h-[55%] w-[68%] -translate-x-1/2 rounded-full bg-[#6b3cff]/20 blur-[90px]" />
-              <Image src="/portfolio/DJ.png" alt="Denis Jamil" fill priority sizes="(min-width: 1024px) 760px, 90vw" className="object-contain object-bottom drop-shadow-[0_35px_55px_rgba(0,0,0,.65)]" />
+              <Image src="/portfolio/DJ.png" alt="Denis Jamil" fill priority sizes="(min-width: 1024px) 760px, 90vw" className="v103-hero-portrait object-contain object-bottom drop-shadow-[0_35px_55px_rgba(0,0,0,.65)]" />
             </div>
           </div>
 
