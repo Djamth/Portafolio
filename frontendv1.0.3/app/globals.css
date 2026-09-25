@@ -297,3 +297,61 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-snap-type: y proximity; }
 }
+
+/* v1.0.3 abstract blue scene backgrounds */
+.v103-scene-bg { position: relative; isolation: isolate; background: #01030a; }
+.v103-scene-bg::before,
+.v103-scene-bg::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+.v103-scene-bg::before {
+  width: min(82vw, 1180px);
+  height: min(82vw, 1180px);
+  border-radius: 48% 52% 60% 40%;
+  right: -28%;
+  top: -42%;
+  border: 1px solid rgba(20,112,255,.16);
+  box-shadow:
+    0 0 0 38px rgba(0,83,220,.025),
+    0 0 0 92px rgba(0,100,255,.02),
+    inset 0 -34px 70px rgba(0,116,255,.18),
+    0 48px 120px rgba(0,84,255,.12);
+  transform: rotate(-18deg) skewX(-8deg);
+  filter: drop-shadow(0 0 34px rgba(0,118,255,.22));
+}
+.v103-scene-bg::after {
+  width: 72%;
+  height: 64%;
+  left: -18%;
+  bottom: -34%;
+  background:
+    linear-gradient(132deg, transparent 18%, rgba(0,82,220,.12) 38%, rgba(0,196,255,.22) 48%, rgba(0,79,255,.12) 58%, transparent 72%);
+  transform: skewX(-16deg) rotate(8deg);
+  filter: blur(18px);
+  opacity: .8;
+}
+.v103-scene-bg-alt::before { left: -31%; right: auto; top: -38%; transform: rotate(22deg) skewX(8deg); }
+.v103-scene-bg-alt::after { left: auto; right: -20%; bottom: -31%; transform: skewX(16deg) rotate(-7deg); }
+.v103-scene-bg-soft::before { opacity: .62; top: -52%; right: -34%; }
+.v103-scene-bg-soft::after { opacity: .5; }
+
+.v103-project-blue {
+  background:
+    radial-gradient(ellipse at 84% 12%, rgba(0,145,255,.15), transparent 36%),
+    radial-gradient(ellipse at 15% 90%, rgba(0,67,210,.14), transparent 42%),
+    #040713;
+}
+.v103-project-blue:nth-child(even) {
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(0,190,255,.12), transparent 35%),
+    radial-gradient(ellipse at 88% 88%, rgba(0,70,230,.16), transparent 42%),
+    #040713;
+}
+@media (max-width: 767px) {
+  .v103-scene-bg::before { width: 130vw; height: 130vw; right: -65%; top: -20%; opacity: .65; }
+  .v103-scene-bg-alt::before { left: -65%; right: auto; }
+  .v103-scene-bg::after { width: 110%; opacity: .48; }
+}
