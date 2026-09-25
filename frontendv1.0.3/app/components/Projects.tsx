@@ -14,7 +14,7 @@ export default function Projects() {
   const visibleProjects = selectedTechnology === "Todas" ? projects : projects.filter((project) => project.tecnologiasutilizadas.includes(selectedTechnology));
 
   return (
-    <section id="projects" className="relative overflow-hidden bg-[#02020f] py-28 text-white">
+    <section id="projects" className="v103-scene-bg v103-scene-bg-soft relative overflow-hidden py-28 text-white">
       <div className="section-shell relative">
         <ScrollReveal className="mx-auto max-w-3xl text-center">
           <p className="text-[10px] font-bold uppercase tracking-[.22em] text-[#a88dff]">03 / Proyectos</p>
@@ -33,7 +33,7 @@ export default function Projects() {
         <div className="mt-12 grid gap-8">
           {visibleProjects.map((project, index) => (
             <ScrollReveal key={`${selectedTechnology}-${project.slug}`} direction="scale">
-              <article className="project-scene group relative flex min-h-[100svh] overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] shadow-[0_32px_90px_rgba(0,0,0,.35)]">
+              <article className="project-scene v103-project-blue group relative flex min-h-[100svh] overflow-hidden rounded-[34px] border border-white/10 shadow-[0_32px_90px_rgba(0,0,0,.35)]">
                 <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%] bg-[radial-gradient(ellipse_at_50%_115%,rgba(123,67,255,.62),rgba(72,35,168,.18)_42%,transparent_72%)] opacity-70 transition duration-500 group-hover:opacity-100" />
                 <div className={`relative grid min-h-full w-full flex-1 content-center gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center lg:p-12 ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
                   <ScrollReveal direction={index % 2 === 0 ? "left" : "right"} delay={120}>
