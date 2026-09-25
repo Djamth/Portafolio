@@ -36,18 +36,25 @@ export default function Projects() {
               <article className="group relative flex min-h-[100svh] overflow-hidden rounded-[34px] border border-white/10 bg-[#070717] shadow-[0_32px_90px_rgba(0,0,0,.35)]">
                 <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[55%] bg-[radial-gradient(ellipse_at_50%_115%,rgba(123,67,255,.62),rgba(72,35,168,.18)_42%,transparent_72%)] opacity-70 transition duration-500 group-hover:opacity-100" />
                 <div className={`relative grid min-h-full w-full flex-1 content-center gap-8 p-6 sm:p-9 lg:grid-cols-2 lg:items-center lg:p-12 ${index % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-                  <ScrollReveal direction={index % 2 === 0 ? "left" : "right"} delay={120}>\n                  <div className="relative z-10">
+                  <ScrollReveal direction={index % 2 === 0 ? "left" : "right"} delay={120}>
+                  <div className="relative z-10">
                     <span className="font-mono text-[9px] uppercase tracking-[.2em] text-[#a88dff]">Project / {String(index + 1).padStart(2, "0")}</span>
                     <h3 className="mt-4 max-w-lg text-3xl font-semibold tracking-[-.045em] sm:text-4xl"><Link href={`/proyectos/${project.slug}`} className="transition hover:text-[#c2b2ff]">{project.nombre}</Link></h3>
                     <p className="mt-5 max-w-lg text-sm leading-7 text-white/45">{project.descripcion}</p>
                     <div className="mt-6 flex flex-wrap gap-2">{project.tecnologiasutilizadas.map((tech)=><span key={tech} className="rounded-full border border-white/10 bg-white/[.04] px-3 py-1.5 font-mono text-[9px] text-white/48">{tech}</span>)}</div>
                     <div className="mt-8 flex flex-wrap gap-5"><Link href={`/proyectos/${project.slug}`} className="inline-flex items-center gap-2 text-xs font-bold text-white">Explorar proyecto <Icon name="arrow" className="size-4" /></Link><a href={project.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-white/40 transition hover:text-white">GitHub <Icon name="external" className="size-3.5" /></a></div>
-                  </div>\n                  </ScrollReveal>\n                  <ScrollReveal direction={index % 2 === 0 ? "right" : "left"} delay={240}>\n                  <Link href={`/proyectos/${project.slug}`} className="relative z-10 block" aria-label={`Ver detalles de ${project.nombre}`}>
+                  </div>
+                  </ScrollReveal>
+                  <ScrollReveal direction={index % 2 === 0 ? "right" : "left"} delay={240}>
+                  <Link href={`/proyectos/${project.slug}`} className="relative z-10 block" aria-label={`Ver detalles de ${project.nombre}`}>
                     <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] border border-white/12 bg-[#0b0b20] shadow-[0_28px_70px_rgba(0,0,0,.4)] transition duration-500 group-hover:-translate-y-2 group-hover:rotate-[.5deg] motion-reduce:transform-none">
                       <div className="flex h-8 items-center gap-1.5 border-b border-white/8 bg-[#0b0b1b] px-4"><span className="size-1.5 rounded-full bg-white/15" /><span className="size-1.5 rounded-full bg-white/15" /><span className="size-1.5 rounded-full bg-white/15" /></div>
                       <div className="relative h-[calc(100%-2rem)]"><Image src={project.imagenes[0]} alt={`Vista previa de ${project.nombre}`} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover opacity-85 transition duration-700 group-hover:scale-[1.025] group-hover:opacity-100 motion-reduce:transform-none" /></div>
                     </div>
-                  </Link>\n                  </ScrollReveal>\n                </div>\n              </article>
+                  </Link>
+                  </ScrollReveal>
+                </div>
+              </article>
             </ScrollReveal>
           ))}
         </div>
