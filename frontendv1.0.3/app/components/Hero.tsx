@@ -26,8 +26,6 @@ export default function Hero() {
           <div className="relative mx-auto h-[440px] w-full max-w-[620px] sm:h-[570px] lg:h-[640px]">
             <div aria-hidden="true" className="absolute left-1/2 top-1/2 h-[62%] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6737ff]/20 blur-[90px]" />
             <HeroOrb />
-            <div className="absolute right-[2%] top-[18%] rounded-2xl border border-white/10 bg-[#09091d]/65 px-4 py-3 text-[10px] text-white/50 shadow-2xl backdrop-blur-xl"><span className="block font-mono text-[#a78bfa]">01 / STACK</span><strong className="mt-1 block text-xs text-white/80">Java · Spring Boot</strong></div>
-            <div className="absolute bottom-[14%] left-[1%] rounded-2xl border border-white/10 bg-[#09091d]/65 px-4 py-3 text-[10px] text-white/50 shadow-2xl backdrop-blur-xl"><span className="block font-mono text-[#a78bfa]">02 / FOCUS</span><strong className="mt-1 block text-xs text-white/80">Backend & APIs REST</strong></div>
           </div>
         </div>
         <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2 text-[9px] font-bold uppercase tracking-[.24em] text-white/35">Scroll para explorar ↓</div>
