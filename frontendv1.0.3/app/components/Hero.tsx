@@ -13,14 +13,14 @@ export default function Hero() {
             <h1 className="v103-hero-name whitespace-nowrap text-[clamp(4.2rem,12.7vw,12rem)] font-black leading-[.76] tracking-[-.075em] text-white">DENIS JAMIL</h1>
           </div>
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-[-14%] top-[18%] z-10 flex items-end justify-center">
+          <div className="pointer-events-none absolute inset-x-0 bottom-[-10%] top-[11%] z-30 flex items-end justify-center">
             <div className="relative h-full w-[min(96vw,940px)]">
-              <div aria-hidden="true" className="absolute bottom-[5%] left-1/2 h-[55%] w-[68%] -translate-x-1/2 rounded-full bg-[#6b3cff]/20 blur-[90px]" />
+              <div aria-hidden="true" className="absolute bottom-[5%] left-1/2 h-[62%] w-[72%] -translate-x-1/2 rounded-full bg-[#6b3cff]/20 blur-[90px]" />
               <Image src="/portfolio/DJ.png" alt="Denis Jamil" fill priority sizes="(min-width: 1024px) 760px, 90vw" className="v103-hero-portrait object-contain object-bottom drop-shadow-[0_35px_55px_rgba(0,0,0,.65)]" />
             </div>
           </div>
 
-          <div className="relative z-30 mt-auto flex items-end justify-between gap-6 pb-10">
+          <div className="relative z-40 mt-auto flex items-end justify-between gap-6 pb-10">
             <p className="max-w-[300px] text-xs leading-6 text-white/38 sm:text-sm">Diseño y desarrollo soluciones backend claras, mantenibles y preparadas para crecer.</p>
             <a href="#projects" className="pointer-events-auto hidden items-center gap-3 font-mono text-[9px] uppercase tracking-[.2em] text-white/45 transition hover:text-white sm:flex">Explorar proyectos <span aria-hidden="true">↓</span></a>
           </div>
