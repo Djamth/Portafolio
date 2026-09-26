@@ -420,3 +420,7 @@ html {
 /* Stronger editorial pop-out: portrait intentionally crosses the name layer. */
 .v103-hero-portrait { transform: translateY(-4.5%) scale(1.2); }
 @media (max-width: 767px) { .v103-hero-portrait { transform: translateY(-3%) scale(1.3); } }
+
+/* Fine-tune portrait after stronger pop-out: preserve overlap while clearing eyebrow copy. */
+.v103-hero-portrait { transform: translateY(-2.2%) scale(1.16); }
+@media (max-width: 767px) { .v103-hero-portrait { transform: translateY(-1.5%) scale(1.26); } }
