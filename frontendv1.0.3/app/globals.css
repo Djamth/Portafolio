@@ -416,3 +416,7 @@ html {
 @media (max-width: 767px) {
   .v103-hero-portrait { transform: scale(1.28); }
 }
+
+/* Stronger editorial pop-out: portrait intentionally crosses the name layer. */
+.v103-hero-portrait { transform: translateY(-4.5%) scale(1.2); }
+@media (max-width: 767px) { .v103-hero-portrait { transform: translateY(-3%) scale(1.3); } }
