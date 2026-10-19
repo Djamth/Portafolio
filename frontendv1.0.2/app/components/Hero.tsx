@@ -1,94 +1,36 @@
-import Image from "next/image";
 import Icon from "./Icon";
-
-const stats = [
-  { icon: "code" as const, value: "10+", label: "Proyectos completados" },
-  { icon: "graduation" as const, value: "8°", label: "Semestre actual" },
-  { icon: "time" as const, value: "2+", label: "Años aprendiendo" },
-  { icon: "star" as const, value: "100%", label: "Compromiso y dedicacion" },
-];
+import HeroOrb from "./HeroOrb";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-white pb-10 pt-12 lg:pb-12 lg:pt-16">
-      <div className="section-shell relative z-10 grid items-center gap-10 lg:grid-cols-[1.03fr_.97fr]">
-        <div>
-          <p className="mb-3 text-sm font-bold tracking-wide text-[#5736df]">
-            Denis Jamil Tineo Huancas · Backend Developer
-          </p>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-[#f3f0ff] px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#5736df]">
-            <Icon name="graduation" className="size-4" />
-            Estudiante de Ingeniería de Sistemas
-          </p>
-          <h1 className="max-w-2xl text-6xl font-black leading-[.94] tracking-[-0.07em] text-[#111326] sm:text-7xl">
-            Construyo soluciones{" "}
-            <span className="bg-gradient-to-r from-[#7128e8] via-[#6b3cff] to-[#2787ff] bg-clip-text text-transparent">
-              digitales.
-            </span>
-          </h1>
-          <div className="mt-7 h-1 w-14 rounded-full bg-[#6933f7]" />
-          <p className="mt-6 max-w-xl text-base leading-7 text-[#5e637c]">
-            Soy desarrollador backend enfocado en Java, Spring Boot, APIs REST y PostgreSQL. Me apasiona crear soluciones claras, mantenibles y orientadas a problemas reales.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#5136ff] to-[#871af0] px-6 py-4 text-sm font-bold text-white shadow-[0_12px_24px_rgba(99,53,245,0.28)] transition hover:-translate-y-1">
-              <Icon name="rocket" />
-              Ver mis proyectos
-              <Icon name="arrow" className="size-4" />
-            </a>
-            <a href="#contact" className="flex items-center gap-3 rounded-2xl border border-[#e0e3ef] bg-white px-6 py-4 text-sm font-bold text-[#22253b] transition hover:border-[#7040f7] hover:text-[#6335f5]">
-              <Icon name="mail" className="size-5" />
-              Contactarme
-            </a>
+    <section id="home" className="light-hero relative isolate overflow-hidden px-0 pb-16 pt-20 text-[#172033] lg:pb-24 lg:pt-28">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_58%_35%,rgba(181,196,255,.4),transparent_42%),radial-gradient(ellipse_at_88%_75%,rgba(205,237,237,.65),transparent_38%)]" />
+      <div className="section-shell relative z-10 grid min-h-[620px] items-center gap-10 lg:grid-cols-[.95fr_1.1fr_.65fr]">
+        <div className="relative z-20">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[.24em] text-[#626d85]">Desarrollo · Tecnología · Impacto</p>
+          <h1 className="max-w-xl text-5xl font-black leading-[1.07] tracking-[-.065em] sm:text-6xl">Construyo soluciones para <span className="bg-gradient-to-r from-[#345be8] to-[#8773d6] bg-clip-text text-transparent">un mejor mañana.</span></h1>
+          <p className="mt-7 max-w-lg text-base leading-8 text-[#59657b]">Soy Denis Jamil, desarrollador backend enfocado en Java, Spring Boot, APIs REST y PostgreSQL. Transformo ideas en soluciones claras y mantenibles.</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#projects" className="inline-flex items-center gap-2 rounded-2xl bg-[#345be8] px-6 py-4 text-sm font-bold text-white shadow-[0_12px_30px_rgba(52,91,232,.18)] transition hover:bg-[#2547bd]">Ver mis proyectos <Icon name="arrow" className="size-4" /></a>
+            <a href="#contact" className="inline-flex items-center gap-2 rounded-2xl border border-[#cad2e4] bg-white/65 px-6 py-4 text-sm font-bold text-[#26344f] backdrop-blur-xl transition hover:bg-white"><Icon name="mail" className="size-4" />Contactarme</a>
           </div>
-          <div className="mt-7 flex gap-3">
-            <a aria-label="GitHub de Denis Jamil Tineo Huancas" href="https://github.com/djamth" target="_blank" rel="me noopener noreferrer" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
-              <Icon name="github" />
-            </a>
-            <a aria-label="LinkedIn de Denis Jamil Tineo Huancas" href="https://www.linkedin.com/in/denis-jamil-tineo-huancas" target="_blank" rel="me noopener noreferrer" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
-              <Icon name="linkedin" />
-            </a>
-            <a aria-label="Email de Denis Jamil Tineo Huancas" href="mailto:denistineohuancas@gmail.com" className="grid size-12 place-items-center rounded-full border border-[#e1e4ee] bg-white text-[#25283c] transition hover:-translate-y-1 hover:border-[#6335f5] hover:text-[#6335f5]">
-              <Icon name="mail" />
-            </a>
+          <div className="mt-8 flex gap-3">
+            <a href="https://github.com/djamth" target="_blank" rel="me noopener noreferrer" aria-label="GitHub de Denis Jamil" className="grid size-11 place-items-center rounded-xl border border-[#cbd3e5] bg-white/65 text-[#26344f] transition hover:bg-white"><Icon name="github" /></a>
+            <a href="mailto:denistineohuancas@gmail.com" aria-label="Enviar correo a Denis Jamil" className="grid size-11 place-items-center rounded-xl border border-[#cbd3e5] bg-white/65 text-[#26344f] transition hover:bg-white"><Icon name="mail" /></a>
           </div>
         </div>
-
-        <div className="relative mx-auto h-[540px] w-full max-w-[580px] lg:h-[620px]">
-          <div className="absolute right-7 top-12 z-0 size-[390px] rounded-full bg-gradient-to-br from-[#7a2cf5] to-[#3677ff] opacity-95 sm:size-[470px]" />
-          <div className="absolute left-0 top-28 z-0 h-28 w-48 rounded-t-full bg-gradient-to-r from-[#522eff] to-[#9832f4]" />
-          <div className="absolute left-20 top-[232px] z-0 h-20 w-44 rounded-b-full bg-gradient-to-r from-[#9c38ed] to-[#4582ff]" />
-          <div className="absolute right-1 top-2 z-0 size-16 rounded-full bg-gradient-to-br from-[#3a74ff] to-[#9e2bea]" />
-          <div className="dot-grid absolute right-[-20px] top-48 z-0 h-36 w-36 opacity-75" />
-          <div className="absolute inset-0 z-20">
-            <Image src="/portfolio/DJ.png" alt="Denis Jamil Tineo Huancas, Backend Developer" fill priority sizes="(min-width: 1024px) 580px, 90vw" className="hero-image-mask object-contain object-bottom contrast-110 drop-shadow-[0_18px_18px_rgba(20,18,48,0.16)]" />
-          </div>
-          <div className="absolute bottom-5 left-4 z-30 h-56 w-[115%] rounded-[50%] border-b-4 border-[#7140ff]" />
-          <div className="absolute bottom-[50px] right-0 z-40 hidden w-60 rounded-2xl border border-white/10 bg-[#141625]/95 p-5 text-xs text-[#cbd0e8] shadow-2xl sm:block">
-            <p className="mb-3 font-bold text-[#a679ff]">&lt;/&gt;</p>
-            <p><span className="text-[#da7dff]">const</span> developer = {"{"}</p>
-            <p className="pl-3"><span className="text-[#7fcfff]">role:</span> <span className="text-[#b8e986]">&quot;Backend&quot;</span>,</p>
-            <p className="pl-3"><span className="text-[#7fcfff]">focus:</span> <span className="text-[#b8e986]">&quot;APIs limpias&quot;</span></p>
-            <p>{"};"}</p>
-          </div>
+        <div className="relative mx-auto h-[390px] w-full max-w-[570px] sm:h-[510px] lg:h-[610px]">
+          <div aria-hidden="true" className="absolute inset-[7%] rounded-full border border-[#b9c6e5]/50" />
+          <HeroOrb />
+          <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 text-[10px] font-bold tracking-[.25em] text-[#6c7892]">APRENDER</div>
+          <div aria-hidden="true" className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] font-bold tracking-[.25em] text-[#6c7892]">INNOVAR</div>
+          <div aria-hidden="true" className="pointer-events-none absolute bottom-[7%] left-[14%] right-[14%] h-10 rounded-[50%] bg-[#aab9dd]/30 blur-2xl" />
+        </div>
+        <div className="relative z-20 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          {[{label:"Enfoque",value:"Backend y APIs",detail:"Soluciones escalables"},{label:"Tecnologías",value:"Java · Spring Boot",detail:"PostgreSQL y REST"},{label:"Objetivo",value:"Crear con impacto",detail:"Aprendizaje continuo"}].map((item) => <div key={item.label} className="rounded-[22px] border border-white/80 bg-white/55 p-5 shadow-[0_16px_45px_rgba(53,76,120,.08)] backdrop-blur-2xl"><p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#63718b]">{item.label}</p><strong className="mt-3 block text-lg tracking-tight text-[#1c2943]">{item.value}</strong><p className="mt-2 text-xs text-[#68758d]">{item.detail}</p></div>)}
         </div>
       </div>
-
-      <div className="section-shell relative z-20 mt-5">
-        <div className="soft-shadow grid overflow-hidden rounded-2xl border border-[#eceef7] bg-white sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex items-center gap-4 border-b border-[#eceef7] px-6 py-5 last:border-b-0 sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:border-r lg:last:border-r-0">
-              <span className="grid size-14 shrink-0 place-items-center rounded-full bg-[#f0ebff] text-[#6537f4] shadow-[0_8px_16px_rgba(98,53,245,0.18)]">
-                <Icon name={stat.icon} className="size-7" />
-              </span>
-              <span>
-                <strong className="block text-2xl leading-none text-[#101228]">{stat.value}</strong>
-                <span className="mt-1 block text-xs leading-4 text-[#5f647b]">{stat.label}</span>
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+      <p className="relative z-10 mt-8 text-center text-xs font-medium tracking-[.14em] text-[#73809a]">DESLIZA PARA EXPLORAR ↓</p>
     </section>
   );
 }
