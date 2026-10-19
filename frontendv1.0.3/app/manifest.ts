@@ -7,7 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Portafolio profesional de Denis Jamil, desarrollador backend.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fbfcff",
-    theme_color: "#6335f5",
+    background_color: "#000000",
+    theme_color: "#007bff",
+    icons: [{ src: "/dj-logo.svg", sizes: "any", type: "image/svg+xml", purpose: "any" }],
   };
 }

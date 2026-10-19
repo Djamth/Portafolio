@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: getSiteUrl(),
+  icons: {
+    icon: [{ url: "/dj-logo.svg", type: "image/svg+xml", sizes: "any" }],
+    shortcut: "/dj-logo.svg",
+  },
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: siteConfig.seo.keywords,
