@@ -22,7 +22,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#02020f] text-white">
+    <main className="min-h-screen overflow-x-clip bg-[#000000] text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <Navbar />
       <Hero />

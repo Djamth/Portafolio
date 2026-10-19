@@ -71,7 +71,7 @@ export default function HeroOrb() {
         <div className="hero-orb-core absolute inset-[13%] rounded-full" />
         <div className="hero-orb-shine absolute inset-[18%] rounded-full" />
         <div className="hero-orb-ring hero-orb-ring-a absolute inset-[8%] rounded-full border border-[#9eaff0]/60" />
-        <div className="hero-orb-ring hero-orb-ring-b absolute inset-[8%] rounded-full border border-[#b7a8e8]/50" />
+        <div className="hero-orb-ring hero-orb-ring-b absolute inset-[8%] rounded-full border border-[#a8c7e8]/50" />
         <div className="hero-orb-ring hero-orb-ring-c absolute inset-[8%] rounded-full border border-[#a9d9dc]/45" />
         <div className="hero-orb-ring hero-orb-ring-d absolute inset-[4%] rounded-full border border-[#4ba8ff]/25" />
       </div>
