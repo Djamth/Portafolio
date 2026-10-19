@@ -68,58 +68,59 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   };
 
   return (
-    <main className="min-h-screen bg-[#f7f8fd] text-[#171a2d]">
+    <main className="relative isolate min-h-screen overflow-hidden bg-black text-white">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[850px] bg-[radial-gradient(ellipse_at_80%_15%,rgba(0,123,255,.18),transparent_60%)]" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
 
-      <header className="border-b border-[#e8ebf4] bg-white">
+      <header className="border-b border-white/10 bg-black/70">
         <div className="section-shell flex min-h-20 items-center justify-between gap-4">
-          <Link href="/" className="font-black tracking-[-0.03em] text-[#171a2d]">Denis Jamil</Link>
-          <Link href="/#projects" className="text-sm font-bold text-[#6335f5]">← Volver a proyectos</Link>
+          <Link href="/" aria-label="Denis Jamil, ir al inicio" className="flex shrink-0 items-center gap-3 font-black uppercase tracking-[-0.03em] text-white transition hover:opacity-80"><Image src="/dj-logo.svg" alt="" width={44} height={44} priority /><span className="hidden sm:inline">Denis Jamil</span></Link>
+          <Link href="/#projects" className="rounded-full border border-white/15 px-4 py-2 text-xs font-medium text-white/70 transition hover:border-blue-400 hover:text-white">← Volver a proyectos</Link>
         </div>
       </header>
 
       <article className="section-shell py-14 md:py-20">
         <div className="mx-auto max-w-4xl">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#6335f5]">Proyecto destacado</p>
-          <h1 className="mt-4 text-4xl font-black tracking-[-0.05em] text-[#111326] md:text-6xl">{project.nombre}</h1>
-          <p className="mt-6 max-w-3xl text-base leading-8 text-[#676d84] md:text-lg">{project.resumen}</p>
+          <p className="font-mono text-[10px] font-bold uppercase tracking-[.22em] text-[#8dc4ff]">Proyecto / {String(projects.findIndex(item => item.slug === project.slug) + 1).padStart(2, "0")}</p>
+          <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-[-.055em] md:text-6xl">{project.nombre}</h1>
+          <p className="mt-6 max-w-3xl text-base leading-8 text-white/60 md:text-lg">{project.resumen}</p>
 
           <div className="mt-7 flex flex-wrap gap-2">
             {project.tecnologiasutilizadas.map((tech) => (
-              <span key={tech} className="rounded-full bg-[#eee9ff] px-4 py-2 text-xs font-black text-[#6335f5]">{tech}</span>
+              <span key={tech} className="rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1.5 font-mono text-[10px] text-blue-200">{tech}</span>
             ))}
           </div>
 
-          <div className="soft-shadow relative mt-10 aspect-[16/9] overflow-hidden rounded-3xl border border-[#e8ebf4] bg-white">
-            <Image src={project.imagenes[0]} alt={`Captura del proyecto ${project.nombre}`} fill priority sizes="(min-width: 1024px) 896px, 100vw" className="object-cover" />
+          <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-[28px] border border-white/10 bg-[#080e18] shadow-[0_24px_80px_rgba(0,123,255,.10)]">
+            <Image src={project.imagenes[0]} alt={`Captura del proyecto ${project.nombre}`} fill priority sizes="(min-width: 1024px) 896px, 100vw" className="object-contain" />
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <section className="rounded-2xl border border-[#e8ebf4] bg-white p-7">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#6335f5]">El problema</p>
-              <h2 className="mt-3 text-2xl font-black tracking-[-0.03em]">Qué necesitaba resolver</h2>
-              <p className="mt-4 text-sm leading-7 text-[#676d84]">{project.problema}</p>
+            <section className="rounded-[28px] border border-white/10 bg-[#080b10] p-6 sm:p-8">
+              <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8dc4ff]">01 / El problema</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-[-.035em]">Qué necesitaba resolver</h2>
+              <p className="mt-4 text-sm leading-7 text-white/60">{project.problema}</p>
             </section>
-            <section className="rounded-2xl border border-[#e8ebf4] bg-white p-7">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-[#6335f5]">La solución</p>
-              <h2 className="mt-3 text-2xl font-black tracking-[-0.03em]">Cómo lo desarrollé</h2>
-              <p className="mt-4 text-sm leading-7 text-[#676d84]">{project.solucion}</p>
+            <section className="rounded-[28px] border border-blue-400/20 bg-[linear-gradient(145deg,#080b10,#07162b)] p-6 sm:p-8">
+              <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8dc4ff]">02 / Mi aporte</p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-[-.035em]">Cómo lo desarrollé</h2>
+              <p className="mt-4 text-sm leading-7 text-white/60">{project.solucion}</p>
             </section>
           </div>
 
-          <section className="mt-6 rounded-2xl border border-[#e8ebf4] bg-white p-7">
-            <p className="text-xs font-black uppercase tracking-[0.2em] text-[#6335f5]">Funcionalidades</p>
-            <h2 className="mt-3 text-2xl font-black tracking-[-0.03em]">Puntos principales del proyecto</h2>
+          <section className="mt-6 rounded-[28px] border border-white/10 bg-[#080b10] p-6 sm:p-8">
+            <p className="font-mono text-[10px] uppercase tracking-[.2em] text-[#8dc4ff]">03 / Funcionalidades</p>
+            <h2 className="mt-4 text-2xl font-semibold tracking-[-.035em]">Puntos principales del proyecto</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {project.funcionalidades.map((feature) => (
-                <li key={feature} className="rounded-xl bg-[#f7f8fd] px-4 py-3 text-sm font-semibold text-[#555b73]">✓ {feature}</li>
+                <li key={feature} className="flex items-start gap-3 rounded-2xl border border-white/5 bg-white/[.025] px-4 py-4 text-sm leading-6 text-white/70"><span aria-hidden="true" className="text-blue-400">✓</span>{feature}</li>
               ))}
             </ul>
           </section>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-[#6335f5] px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5">Ver repositorio en GitHub ↗</a>
-            <Link href="/#projects" className="rounded-xl border border-[#dfe2ec] bg-white px-6 py-3 text-sm font-black text-[#555b73] transition hover:border-[#cbbcff] hover:text-[#6335f5]">Ver otros proyectos</Link>
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#007bff] px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500">Ver repositorio en GitHub ↗</a>
+            <Link href="/#projects" className="rounded-full border border-white/25 bg-white/[.03] px-6 py-3 text-sm font-semibold text-white/80 transition hover:border-blue-400 hover:text-white">Ver otros proyectos</Link>
           </div>
         </div>
       </article>

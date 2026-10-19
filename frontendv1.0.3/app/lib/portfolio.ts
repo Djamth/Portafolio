@@ -10,6 +10,11 @@ export type Project = {
   imagenes: string[];
   tecnologiasutilizadas: string[];
   funcionalidades: string[];
+  presentacion: {
+    problema: string;
+    aporte: string;
+    tecnologias: [string, string, string];
+  };
 };
 
 export type Certificate = {
@@ -25,6 +30,11 @@ export const projects: Project[] = [
   {
     id: 0,
     slug: "portafolio-personal",
+    presentacion: {
+      problema: "Reunir mi perfil, experiencia y proyectos en un sitio propio, rápido y accesible.",
+      aporte: "Desarrollé una web responsive con componentes reutilizables y una base SEO.",
+      tecnologias: ["Next.js", "TypeScript", "Tailwind CSS"],
+    },
     nombre: "Portafolio Personal",
     descripcion:
       "Portafolio profesional construido con Next.js, Tailwind CSS y TypeScript para presentar mis proyectos, habilidades, experiencia y perfil como desarrollador backend.",
@@ -47,6 +57,11 @@ export const projects: Project[] = [
   {
     id: 1,
     slug: "sistema-votacion-electronica",
+    presentacion: {
+      problema: "Digitalizar elecciones escolares, validar participantes y evitar votos duplicados.",
+      aporte: "Implementé validaciones en el backend, persistencia de votos y la interfaz de votación.",
+      tecnologias: ["Java", "Spring Boot", "Next.js"],
+    },
     nombre: "Sistema de Votación Electrónica",
     descripcion:
       "Sistema para gestionar elecciones académicas, validar la participación de estudiantes, registrar votos y consultar resultados mediante una arquitectura backend y frontend.",
@@ -69,6 +84,11 @@ export const projects: Project[] = [
   {
     id: 2,
     slug: "sistema-gestion-usuarios-modulos",
+    presentacion: {
+      problema: "Administrar usuarios y módulos sin perder claridad a medida que crece el backend.",
+      aporte: "Organicé la lógica en capas con DTOs, mappers, persistencia y endpoints REST.",
+      tecnologias: ["Java", "Spring Boot", "JPA"],
+    },
     nombre: "Sistema de Gestión de Usuarios y Módulos",
     descripcion:
       "Backend modular para administrar usuarios, módulos y reglas de acceso mediante una arquitectura organizada con entidades, DTOs, mappers, servicios y endpoints REST.",
