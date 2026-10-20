@@ -1,62 +1,48 @@
 # Portafolio — Denis Jamil Tineo Huancas
 
-Portafolio web personal de **Denis Jamil Tineo Huancas**, estudiante de Ingeniería de Sistemas enfocado en desarrollo backend con **Java, Spring Boot, APIs REST y PostgreSQL**.
+Portafolio personal enfocado en desarrollo backend con Java, Spring Boot, APIs REST y PostgreSQL.
 
-## Sitio web
+Sitio publicado: https://portafolio-five-lemon-79.vercel.app/
 
-https://portafolio-five-lemon-79.vercel.app/
+## Estructura
 
-## Características
+- `frontendv1.0.3/`: aplicación vigente, desarrollada con Next.js, React, TypeScript y Tailwind CSS.
+- `backend/`: proyecto Java / Spring Boot conservado para su desarrollo independiente.
 
-- Diseño responsivo para escritorio y dispositivos móviles.
-- Presentación profesional, habilidades técnicas, educación y proyectos destacados.
-- Enlaces directos a proyectos y perfiles profesionales.
-- Animaciones e interacciones con JavaScript.
-- SEO técnico mediante metadatos, Open Graph, canonical URL y datos estructurados Schema.org.
-- `robots.txt` y `sitemap.xml` para facilitar el rastreo e indexación por motores de búsqueda.
+La web incluye un Hero geométrico, galería interactiva de proyectos, páginas individuales, navegación adaptable y metadatos SEO. El contacto abre el cliente de correo mediante `mailto:`.
 
-## Tecnologías
-
-| Tecnología | Uso |
-| --- | --- |
-| HTML5 | Estructura y contenido semántico |
-| CSS3 | Diseño responsivo, estilos y animaciones |
-| JavaScript | Interactividad y comportamiento de la interfaz |
-| Vercel | Despliegue del portafolio |
-
-## Proyectos destacados
-
-### Sistema de Votación Escolar
-Sistema para gestionar elecciones estudiantiles, desarrollado con Java, Spring Boot y PostgreSQL.
-
-### Sistema de Gestión de Usuarios y Módulos
-Aplicación para administración de usuarios, roles y módulos con Java, Spring Boot, Vue.js y PostgreSQL.
-
-## SEO
-
-El sitio incluye elementos básicos de optimización para buscadores:
-
-- `title` y meta description descriptivos.
-- URL canónica.
-- Open Graph y Twitter Card.
-- Schema.org `Person` mediante JSON-LD.
-- Sitemap XML.
-- Reglas de rastreo para buscadores.
-- Contenido semántico y textos alternativos en imágenes relevantes.
-
-## Ejecución local
+## Desarrollo local
 
 ```bash
-git clone https://github.com/Djamth/Portafolio.git
-cd Portafolio
+cd frontendv1.0.3
+npm ci
+npm run dev
 ```
 
-Luego abre `index.html` en el navegador o utiliza un servidor local para archivos estáticos.
+Abre http://localhost:3000. Para validar los cambios:
 
-## Autor
+```bash
+npm run lint
+npm run build
+```
 
-**Denis Jamil Tineo Huancas**  
-Backend Developer · Estudiante de Ingeniería de Sistemas
+## Despliegue
 
-- GitHub: https://github.com/Djamth
-- LinkedIn: https://www.linkedin.com/in/denistineo
+Vercel publica la rama `main` con **Root Directory = `frontendv1.0.3`**. Mantén esa ruta mientras siga configurada en Vercel.
+
+Consulta [la documentación del frontend](frontendv1.0.3/README.md) para configurar la URL pública y revisar el despliegue.
+
+## Versiones
+
+Las versiones se conservan mediante tags y [releases de GitHub](https://github.com/Djamth/Portafolio/releases), sin duplicar carpetas en la rama actual:
+
+- [v1.0.3](https://github.com/Djamth/Portafolio/releases/tag/v1.0.3): nueva interfaz publicada.
+- [v1.0.1](https://github.com/Djamth/Portafolio/releases/tag/v1.0.1): versión publicada anterior; su aplicación estaba en `frontendv1.0.2`.
+
+Los nombres de las carpetas históricas no equivalen necesariamente a los tags. Para consultar una versión sin modificar tu directorio de trabajo:
+
+```bash
+git worktree add --detach ../Portafolio-v1.0.1 v1.0.1
+```
+
+Las carpetas y la web estática retiradas siguen disponibles en el historial de Git. Las nuevas mejoras deben partir de `main` y entrar mediante pull requests.
