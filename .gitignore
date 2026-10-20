@@ -1,0 +1,15 @@
+# Dependencias y artefactos locales, incluidas carpetas históricas
+node_modules/
+.next/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+
+# Configuración privada
+.env*
+!.env.example
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://portafolio-five-lemon-79.vercel.app/sitemap.xml
